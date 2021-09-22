@@ -18,10 +18,10 @@ const MenuComponents = props => {
       )
     },
     {
-      key: 'Send/Receive BCH',
-      component: <SendReceive key='Send/Receive BCH' {...props} />,
+      key: 'Send/Receive XRG',
+      component: <SendReceive key='Send/Receive XRG' {...props} />,
       menuItem: (
-        <Item icon='fa-exchange-alt' key='Send/Receive BCH' text='Send/Receive BCH' />
+        <Item icon='fa-exchange-alt' key='Send/Receive XRG' text='Send/Receive XRG' />
       )
     },
     {

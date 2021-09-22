@@ -27,7 +27,7 @@ class InfoWallets extends React.Component {
               <Col sm={12} className='text-center mt-2 mb-2'>
                 <p>
                   This is an open source, non-custodial web wallet
-                  supporting Bitcoin Cash (BCH) and SLP tokens. Web wallets
+                  supporting Ergon (XRG) and SLP tokens. Web wallets
                   offer user convenience, but they are inherently insecure and
                   bad for privacy.{' '}
                   <b>Storing large amounts of money on a web wallet is not

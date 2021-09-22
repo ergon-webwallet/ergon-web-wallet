@@ -54,8 +54,8 @@ class Send extends React.Component {
                       <Text
                         id='addressToSend'
                         name='address'
-                        placeholder='Enter bch address to send'
-                        label='BCH Address'
+                        placeholder='Enter xrg address to send'
+                        label='XRG Address'
                         labelPosition='above'
                         onChange={_this.handleUpdate}
                         className='title-icon'
@@ -92,12 +92,12 @@ class Send extends React.Component {
                       />
                       <div className='text-left pb-4'>
                         <p>
-                          {_this.state.sendCurrency === 'BCH'
+                          {_this.state.sendCurrency === 'XRG'
                             ? `USD: ${(
                                 _this.state.amountSat *
                                 (_this.props.currentRate / 100)
                               ).toFixed(2)}`
-                            : `BCH: ${(
+                            : `XRG: ${(
                                 _this.state.amountSat /
                                 (_this.props.currentRate / 100)
                               ).toFixed(8)}`}
@@ -169,7 +169,7 @@ class Send extends React.Component {
   handleChangeCurrency () {
     if (_this.state.sendCurrency === 'USD') {
       _this.setState({
-        sendCurrency: 'BCH'
+        sendCurrency: 'XRG'
       })
       if (_this.state.amountSat > 0) {
         _this.setState({
@@ -217,7 +217,7 @@ class Send extends React.Component {
 
       const utxos = bchWalletLib.utxos.utxoStore.bchUtxos
       if (!utxos.length) {
-        throw new Error('No BCH Utxos to spend!')
+        throw new Error('No XRG Utxos to spend!')
       }
 
       // Get total of satoshis fron the bch utxos
@@ -448,7 +448,7 @@ class Send extends React.Component {
         throw new Error('No Result!')
       }
       if (typeof data !== 'string') {
-        throw new Error('It should scan a bch address or slp address')
+        throw new Error('It should scan a xrg address or slp address')
       }
 
       _this.setState({
