@@ -91,7 +91,7 @@ class NewWallet extends React.Component {
           bchjsOptions.restURL = restURL
         }
       }
-
+      bchjsOptions.restURL = "http://127.0.0.1:3000/v5/"
       const bchWalletLib = new _this.BchWallet(null, bchjsOptions)
 
       // Update bchjs instances  of minimal-slp-wallet libraries
